@@ -13,7 +13,7 @@ RUN npm install
 # Copia o restante do código para o container
 COPY . .
 
-# Expõe a porta que o app usará (exemplo: 3000 para o BFF)
+# Expõe a porta que o app usará
 EXPOSE 3000
 
 # Comando para iniciar o app

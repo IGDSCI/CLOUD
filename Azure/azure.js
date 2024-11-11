@@ -9,8 +9,8 @@ module.exports = async function (context, req) {
         server: process.env['SQL_SERVER'], // Endereço do servidor
         database: process.env['SQL_DATABASE'], // Nome do banco de dados
         options: {
-            encrypt: true, // Para Azure SQL
-            trustServerCertificate: false // Defina como true para certificados autoassinados, se necessário
+            encrypt: true,
+            trustServerCertificate: false
         }
     };
 

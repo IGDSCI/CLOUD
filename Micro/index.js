@@ -1,11 +1,10 @@
-// index.js
 const express = require('express');
 const app = express();
 const pool = require('./db');
 app.use(express.json());
 
 app.post('/reservas', async (req, res) => {
-  console.log(req.body); // Adicione este log
+  console.log(req.body);
   try {
     const { cliente_id, vaga_id, data_reserva, data_inicio, data_fim, status } = req.body;
     const novaReserva = await pool.query(
@@ -30,6 +29,7 @@ app.get('/reservas', async (req, res) => {
     console.error(err.message);
   }
 });
+
 // Atualizar uma reserva
 app.put('/reservas/:id', async (req, res) => {
   try {
@@ -52,6 +52,7 @@ app.put('/reservas/:id', async (req, res) => {
     res.status(500).json({ error: "Erro ao atualizar a reserva" });
   }
 });
+
 // Deletar uma reserva
 app.delete('/reservas/:id', async (req, res) => {
   try {

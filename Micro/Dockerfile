@@ -13,7 +13,7 @@ RUN npm install
 # Copiar o restante dos arquivos da aplicação para o contêiner
 COPY . .
 
-# Expor a porta que o serviço vai rodar (porta 5000 conforme o seu código)
+# Expor a porta que o serviço vai rodar
 EXPOSE 5000
 
 # Comando para iniciar o servidor
